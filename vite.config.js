@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react()],
-  base: mode === 'github' ? '/Desplegament/' : '/',
+  base: process.env.VITE_BASE_PATH || '/',
 
   resolve: {
     alias: {
@@ -22,4 +22,4 @@ export default defineConfig(({ mode }) => ({
     assetsDir: 'assets',
     sourcemap: false
   }
-}))
+})
