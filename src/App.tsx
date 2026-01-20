@@ -79,6 +79,7 @@ export default function App() {
             <p><strong>Mensaje:</strong> {apiData.mensaje}</p>
             <p><strong>Plataforma:</strong> {apiData.plataforma}</p>
             <p><strong>Tipo:</strong> {apiData.tipo}</p>
+            
           </div>
         ) : (
           !error && <p>Cargando respuesta de la API...</p>
